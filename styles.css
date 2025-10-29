@@ -1,0 +1,172 @@
+h1{
+    color: red;
+}
+nav {
+  background-color: #2563eb;
+  padding: 10px 0;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffeb3b;
+}
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Light circles moving background effect */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 8s infinite ease-in-out;
+}
+
+.hero::before {
+  top: 10%;
+  left: 10%;
+}
+
+.hero::after {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+}
+
+.btn {
+  background-color: #fff;
+  color: #2563eb;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+  color: white;
+  transform: scale(1.05);
+}
+/* Instagram link style */
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: white;
+  color: #e1306c;
+  transform: scale(1.05);
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+}
+.countdown-css {
+  margin-top: 30px;
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 40px;
+}
+
+.number {
+  display: inline-block;
+  animation: countdown 3s linear forwards;
+}
+
+.number:nth-child(1) { animation-delay: 0s; }
+.number:nth-child(2) { animation-delay: 1s; }
+.number:nth-child(3) { animation-delay: 2s; }
+
+@keyframes countdown {
+  0% { transform: scale(1); opacity: 1; }
+  80% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
